@@ -1,0 +1,8 @@
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.csproj.AssemblyReference.cache
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.AssemblyInfoInputs.cache
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.AssemblyInfo.cs
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.csproj.CoreCompileInputs.cache
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pablo-depine\Desktop\Projetos\task-managerAPI\task-managerAPI\obj\Debug\net8.0\task-managerAPI.sourcelink.json
