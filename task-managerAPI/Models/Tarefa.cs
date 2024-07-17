@@ -4,7 +4,7 @@ namespace task_managerAPI.Models
 {
     public class Tarefa
     {
-        public int Id { get; set; }
+        public int TaskId { get; set; }
         public string Title { get; set; }
         public PrioridadeEnum Priority { get; set; }
         public string Description { get; set; }

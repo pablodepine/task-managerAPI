@@ -14,23 +14,45 @@ namespace task_managerAPI.Service.TarefaService
             getConnection = _config.GetConnectionString("DefaultConnection");
         }
 
-        public Task<IEnumerable<Tarefa>> CreateTarefa(Tarefa tarefa)
+        public async Task<IEnumerable<Tarefa>> CreateTarefa(Tarefa tarefa)
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(getConnection))
+            {
+                var sql = $"insert into Tasks (title, priority, description, status) values (@title, @priority, @description, @status)";
+                await conn.ExecuteAsync(sql, tarefa);
+
+                return await conn.QueryAsync<Tarefa>("select * from Tasks");
+            }
         }
 
         public async Task<IEnumerable<Tarefa>> GetAllTarefas()
         {
-            using(var con = new SqlConnection(getConnection))
+            using(var conn = new SqlConnection(getConnection))
             {
-                var sql = "select * from Tarefas";
-                return await con.QueryAsync<Tarefa>(sql);
+                var sql = "select * from Tasks";
+                return await conn.QueryAsync<Tarefa>(sql);
             }
         }
 
-        public Task<IEnumerable<Tarefa>> UpdateTarefa(Tarefa tarefa)
+        public async Task<Tarefa> GetTarefaById(int taskId)
         {
-            throw new NotImplementedException();
+            using(var conn = new SqlConnection(getConnection))
+            {
+                var sql = "select * from Tasks where TaskId = @Id";
+
+                return await conn.QueryFirstOrDefaultAsync<Tarefa>(sql, new { Id = taskId } );
+            }
+        }
+
+        public async Task<IEnumerable<Tarefa>> UpdateTarefa(Tarefa tarefa)
+        {
+            using(var conn = new SqlConnection(getConnection))
+            {
+                var sql = "update Tasks set title = @title, priority = @priority, description = @description, status = @status where TaskId = @TaskId";
+                await conn.ExecuteAsync(sql, tarefa);
+
+                return await conn.QueryAsync<Tarefa>("select * from Tasks");
+            }
         }
     }
 }

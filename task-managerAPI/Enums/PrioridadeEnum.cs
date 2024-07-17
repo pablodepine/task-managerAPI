@@ -1,12 +1,16 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace task_managerAPI.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum PrioridadeEnum
+    public enum PrioridadeEnum : short
     {
-        Alta,
-        Media,
-        Baixa
+        [Description("Alta")]
+        Alta = 0,
+        [Description("Media")]
+        Media = 1,
+        [Description("Baixa")]
+        Baixa = 2
     }
 }
